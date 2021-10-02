@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/01 19:29:47 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/10/01 19:30:32 by LeoMoreno        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char	*ft_strnstr(const char *haystack, const char *needle)
+{
+	int	cont_1;
+	int	cont_2;
+	int	cont_3;
+
+	cont_1 = 0;
+	while (haystack[cont_1] != '\0')
+	{
+		cont_2 = 0;
+		if (haystack[cont_1] == needle[cont_2])
+		{
+			cont_3 = cont_1;
+			while (haystack[cont_3] == needle[cont_2])
+			{
+				cont_1++;
+				cont_3++;
+			}
+		}	
+		if (needle[cont_2] == '\0')
+			return ((char *)&haystack[cont_1]);
+		cont_1++;
+	}
+	return (NULL);
+}
