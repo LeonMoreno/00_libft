@@ -4,8 +4,12 @@ int main(void)
 {
 	int a;
 	char res;
-	char s9[] = "leo hola  Colombia aqui esot en 42 leo";
+	char *res_20;
+	int res_11;
+	char s9[] = "leo hola como estas?";
 	char dst9[100];
+	char needle[] = "est";
+	char dst_12[] = "aqui";
 	char s1_19[] = "Hola Leo";
 	char s2_19[] = "Hola Leo";
 	
@@ -19,11 +23,13 @@ int main(void)
 	printf("7. -- ft_memset\n");
 	printf("8. -- ft_bzero\n");
 	printf("9. -- ft_memcpy\n");
-	printf("10. -- ft_memmove\n");
-	printf("11. -- ft_strlcpy\n");
-	printf("12. -- ft_strlcat\n");
+	printf("10. -- ft_memmove\t");
 	printf("19. -- ft_memcmp\n");
-	printf("Tapez le programme que vous souhaitez exécuter: \n" );
+	printf("11. -- ft_strlcpy\t");
+	printf("20. -- ft_strnstr\n");
+	printf("12. -- ft_strlcat\n");
+	
+	printf("Tapez le programme que vous souhaitez exécuter: " );
 	scanf("%d", &a);
 
 	switch(a)
@@ -37,8 +43,19 @@ int main(void)
 			printf("%s\n", dst9);
 			break;
 		case 11:
-			ft_strlcpy(dst9, s9, 4);
+			res_11 = ft_strlcpy(dst9, s9, 0);
+			//ft_strlcpy(((void *)0), ((void *)0), 10);
 			printf("%s\n", dst9);
+			printf("%d\n", res_11);
+			break;
+		case 12:
+			res_11 = ft_strlcat(dst_12, s9, 7);
+			printf("%s\n", dst_12);
+			printf("%d\n", res_11);
+			break;
+		case 20:
+			res_20 = ft_strnstr(s9, needle);
+			printf("%s\n", res_20);
 			break;
 	}
 	return (0);
@@ -65,15 +82,12 @@ int main(void)
 	//ft_bzero(s, 4);
 	//printf(" Avant d = %s s = %s \n", d, s);
 	//ft_memmove(d, s, 9);
-	//ft_strlcat(dst, s, 7);
-	//printf("Antes func %c\n", ch);
 	//res = ft_toupper(ch);
 	//res = ft_tolower(ch);
 	//res = ft_strchr(s, ch, &ptr);
 	//res = ft_strrchr(s, ptr, 3);
 	//res = ft_strncmp(s, ptr, 2);
 	//res = ft_memchr(s,'s', 15);
-	//res = ft_strnstr(s, d);
 	//res = ft_atoi(s);
 	//ptr = ft_strdup(s);
 	//ptr = ft_substr(s, 5, 4);

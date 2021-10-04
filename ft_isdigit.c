@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/16 08:57:56 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/09/16 08:58:03 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/10/04 13:26:30 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/10/04 17:55:30 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
