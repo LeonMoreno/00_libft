@@ -49,12 +49,12 @@ int main(void)
 			printf("%d\n", res_11);
 			break;
 		case 12:
-			res_11 = ft_strlcat(dst_12, s9, 7);
+			res_11 = ft_strlcat(dst_12, s9, 20);
 			printf("%s\n", dst_12);
 			printf("%d\n", res_11);
 			break;
 		case 20:
-			res_20 = ft_strnstr(s9, needle);
+			res_20 = ft_strnstr(s9, needle, 20);
 			printf("%s\n", res_20);
 			break;
 	}
