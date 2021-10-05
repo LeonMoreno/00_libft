@@ -6,7 +6,7 @@
 /*   By: lmoreno <lmoreno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 13:19:46 by lmoreno           #+#    #+#             */
-/*   Updated: 2021/10/04 13:22:58 by lmoreno          ###   ########.fr       */
+/*   Updated: 2021/10/05 15:48:26 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,25 @@
 
 int	ft_atoi(const char *str)
 {
-	int	cont;
-	int	res;
+	int		cont;
+	int		res;
+	int		sign;
 
 	cont = 0;
 	res = 0;
-	if (str[cont] >= 48 && str[cont] <= 57)
+	sign = 1;
+	while ((str[cont] >= 9 && str[cont] <= 13) || str[cont] == 32)
+		cont++;
+	if (str[cont] == '-' || str[cont] == '+')
 	{
-		while (str[cont] != '\0' && (str[cont] >= 48 && str[cont] <= 57))
-		{
-			res = (res * 10) + (str[cont] - 48);
-			cont++;
-		}
-		return (res);
+		if (str[cont] == '-')
+			sign = sign * -1;
+		cont++;
 	}
-	if ((str[cont] >= 'A' && str[cont] <= 'Z')
-		|| (str[cont] >= 97 && str[cont] <= 122))
+	while (str[cont] != '\0' && ((str[cont] >= '0' && str[cont] <= '9')))
 	{
-		while (str[cont] != '\0')
-		{
-			res = (str[cont] - str[cont]) + '0';
-			printf ("res vale: %d\n", res);
-			cont++;
-		}
-		return (res);
+		res = (res * 10) + (str[cont] - 48);
+		cont++;
 	}
-	return (7);
+	return (sign * res);
 }

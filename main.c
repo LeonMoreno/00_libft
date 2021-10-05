@@ -6,11 +6,11 @@ int main(void)
 	char res;
 	char *res_20;
 	int res_11;
-	char s9[] = "leo hola como estas?";
+	char s9[] = "A";
 	char dst9[100];
-	char needle[] = "est";
+	char needle[] = "";
 	char dst_12[] = "aqui";
-	char s1_19[] = "Hola Leo";
+	char s1_19[] = "99999999999999999999999999";
 	char s2_19[] = "Hola Leo";
 	
 	printf("Menu des programmes\n\n");
@@ -27,7 +27,8 @@ int main(void)
 	printf("19. -- ft_memcmp\n");
 	printf("11. -- ft_strlcpy\t");
 	printf("20. -- ft_strnstr\n");
-	printf("12. -- ft_strlcat\n");
+	printf("12. -- ft_strlcat\t");
+	printf("21. -- ft_atoi\n");
 	
 	printf("Tapez le programme que vous souhaitez exécuter: " );
 	scanf("%d", &a);
@@ -54,8 +55,13 @@ int main(void)
 			printf("%d\n", res_11);
 			break;
 		case 20:
-			res_20 = ft_strnstr(s9, needle, 20);
+			res_20 = ft_strnstr(s9, needle, 2);
 			printf("%s\n", res_20);
+			printf("%p\n", res_20);
+			break;
+		case 21:
+			res_11 = ft_atoi(s1_19);
+			printf("%d\n", res_11);
 			break;
 	}
 	return (0);
@@ -88,7 +94,6 @@ int main(void)
 	//res = ft_strrchr(s, ptr, 3);
 	//res = ft_strncmp(s, ptr, 2);
 	//res = ft_memchr(s,'s', 15);
-	//res = ft_atoi(s);
 	//ptr = ft_strdup(s);
 	//ptr = ft_substr(s, 5, 4);
 	//ptr = ft_strjoin(s, d);

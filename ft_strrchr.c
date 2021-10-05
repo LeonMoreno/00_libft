@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:04:06 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/05 16:05:47 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/10/05 11:06:09 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/10/05 11:09:43 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*tab;
-	int		i;
+	int	cont;
 
-	i = 0;
-	while (s1[i])
-		i++;
-	tab = malloc(sizeof(*tab) * (i + 1));
-	if (!tab)
-		return (NULL);
-	i = 0;
-	while (s1[i])
+	cont = 0;
+	while (s[cont])
+		cont++;
+	while ((cont + 1) > 0)
 	{
-		tab[i] = s1[i];
-		i++;
-	}
-	tab[i] = '\0';
-	return (tab);
+		if (s[cont] == (char) c)
+			return ((char *)&s[cont]);
+		cont--;
+	}	
+	return (NULL);
 }
