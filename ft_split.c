@@ -1,78 +1,89 @@
 #include "libft.h"
 
-int count_word(char const *s, char c)
+void	ft_freetab(char **str, size_t size)
 {
-	int cnt_wo;
-	
-	cnt_wo = 1;
-	while (*s != '\0')
-	{
-		if (*s == c && *(s + 1) == c)
-			s++;
-		if (*s == c)
-			cnt_wo++;		
-		s++;
-	}
-	return (cnt_wo);
-}
-
-void word_len(char const *s, char c, char **res)
-{
-	int word_len;
-	int i;
+	size_t	i;
 
 	i = 0;
-	word_len = 1;
-	while (*s != '\0')
-	{
-		if (*s == c && *(s + 1) == c)
-			s++;
-		if (*s != c && *s != '\0')
-			word_len++;
-		else
-		{
-			res[i] = malloc (sizeof(char) * word_len);
-		   	word_len = 1;
-	   		i++;
-		}
-	s++;		
-	}
-		res[i] = malloc (sizeof(char) * word_len);
+	while (i < size)
+		free(str[i]);
+	free(str);
 }
 
-void cpy_word(char const *s, char c, char **res)
+int count_words(char const *w, char c)
+{
+	int cnt_w;
+	int cnt_c;
+
+	cnt_w = 0;
+	cnt_c = 0;
+	while (*w != '\0')
+	{
+		if (cnt_c == 0 && *w != c && *w != '\0')
+		{
+			cnt_w++;
+			cnt_c = 1;
+		}
+		else if (cnt_c == 1 && *w == c)
+			cnt_c = 0;
+		w++;
+	}
+	return (cnt_w);
+}
+
+int word_len(char const *w, char c)
+{
+	int len;
+
+	len = 0;
+	while (*w != c && *w != '\0')
+	{
+		len++;
+		w++;
+	}
+	return (len);
+}
+
+char *cpy_word(char const *w, char c)
 {
 	char *word;
 	int i;
 
 	i = 0;
-	word = res[i];
-	while (*s != '\0')
-	{
-		if (*s == c && *(s + 1) == c)
-			s++;
-		if (*s != c && *s != '\0')
-			*word++ = *s;
-		else
-		{
-			*word = '\0';
-			i++;
-			word = res[i];
-		}
-		s++;
-	}
-	*word = '\0'; 
+	word = malloc(sizeof(char) * word_len(w, c));
+	if (!word)
+		return (NULL);
+	while (*w != c)
+		word[i++] = *w++;
+	word[i] = '\0';
+	return (word);
 }
-
 
 char **ft_split(char const *s, char c)
 {
 	char **res;
-	if (!s)
+	int i = 0;
+
+	if(!s)
 		return (NULL);
-	if (!(res = malloc(sizeof(*res) *  count_word(s, c))))
-			return (NULL);
-	word_len(s, c, res);
-	cpy_word(s, c, res);
+	res = malloc(sizeof(char *) * count_words(s, c));
+	if (!res)
+		return (NULL);
+	while (*s != '\0')
+	{
+		if (*s == c)
+			s++;
+		if (*s != c && *s != '\0')
+		{
+			res[i++] = cpy_word(s, c);
+				if (!res)
+				{
+					ft_freetab(res, count_words(s, c));
+					return (NULL);
+				}
+			s = s + word_len(s, c);
+		}
+	}
+	res[i] = NULL;
 	return (res);
-}
+}	

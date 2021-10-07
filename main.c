@@ -10,10 +10,15 @@ int main(void)
 	char dst9[100];
 	char needle[] = "";
 	char dst_12[] = "aqui";
-	char s1_19[] = "99999999999999999999999999";
+	char s1_19[] = "";
 	char s2_19[] = "Hola Leo";
+	char s_26[] = "Leo hola como estas Leo";
+	char set[] = "Leo";
+	int i = 0;
+	char **ptr;
+	char s[] = "      split       this for   me  !       ";
 	
-	printf("Menu des programmes\n\n");
+	printf("\n\t\tMenu des programmes 1era Parte\n\n");
 	printf("1. -- ft_isalpha\n");
 	printf("2. -- ft_isdigit\n");
 	printf("3. -- ft_isalnum\n");
@@ -29,8 +34,13 @@ int main(void)
 	printf("20. -- ft_strnstr\n");
 	printf("12. -- ft_strlcat\t");
 	printf("21. -- ft_atoi\n");
+	printf("\n\t\tMenu des programmes 2da  Parte\n\n");
+	printf("24. -- ft_substr\n");
+	printf("26. -- ft_strtrim\n");
+	printf("27. -- ft_split\n");
+	printf("28. -- ft_itoa\n");
 	
-	printf("Tapez le programme que vous souhaitez exécuter: " );
+	printf("\n\nTapez le programme que vous souhaitez exécuter: " );
 	scanf("%d", &a);
 
 	switch(a)
@@ -63,6 +73,25 @@ int main(void)
 			res_11 = ft_atoi(s1_19);
 			printf("%d\n", res_11);
 			break;
+		case 24:
+			res_20 = ft_substr(s1_19, 5, 4);
+			printf("%s\n", res_20);
+			break;
+		case 26:
+			res_20 = ft_strtrim(s_26, set);
+			printf("%s\n", res_20);
+			break;
+		case 27:
+			ptr = ft_split(s, ' ');
+			for(i = 0; ptr[i]; i++)
+	 		{
+	 			printf("%s \n", ptr[i]);
+			}
+			break;
+		case 28:
+			res_20 = ft_itoa(-9870);
+	 		printf("%s \n", res_20);
+			break;
 	}
 	return (0);
 }
@@ -72,7 +101,6 @@ int main(void)
 	//int ch;
 	//int res;
 	//int i;
-	//char **ptr;
 
 	//ft_bzero(dst, 100);
 	//int res;
@@ -95,16 +123,9 @@ int main(void)
 	//res = ft_strncmp(s, ptr, 2);
 	//res = ft_memchr(s,'s', 15);
 	//ptr = ft_strdup(s);
-	//ptr = ft_substr(s, 5, 4);
 	//ptr = ft_strjoin(s, d);
-	//ptr = ft_strtrim(s, d);
-	// ptr = ft_split(s, d);
 
 	//printf("%s\n", *ptr);
 	//printf(" Despues d = %s s = %s \n", d, s);
 	
-	 //for(i = 0; ptr[i]; i++)
-	 //{
-	// printf("%s \n", ptr[i]);
-	 //}
 	 

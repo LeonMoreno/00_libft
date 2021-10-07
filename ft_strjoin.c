@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 11:06:09 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/07 11:49:15 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/10/06 14:04:59 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/10/06 15:31:30 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	cont;
+	int		cont;
+	int		cont2;
+	char	*ptr;
 
 	cont = 0;
-	while (s[cont])
-		cont++;
-	while ((cont + 1) > 0)
+	cont2 = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	ptr = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (ptr == NULL)
+		return (NULL);
+	while (s1[cont])
 	{
-		if (s[cont] == (char) c)
-			return ((char *)&s[cont]);
-		cont--;
-	}	
-	return (NULL);
+		ptr[cont] = s1[cont];
+		cont++;
+	}
+	while (s2[cont2])
+	{
+		ptr[cont] = s2[cont2];
+		cont++;
+		cont2++;
+	}
+	ptr[cont] = '\0';
+	return (ptr);
 }

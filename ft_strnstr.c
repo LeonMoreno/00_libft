@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 19:29:47 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/05 16:17:09 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/10/06 12:59:47 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		if (haystack[cont_1] == needle[cont_2])
 		{
 			cont_3 = cont_1;
-			while (haystack[cont_2 + cont_1] && haystack[cont_3] == needle[cont_2] && cont_3 < (int) len)
+			while (haystack[cont_2 + cont_1]
+				&& haystack[cont_3] == needle[cont_2] && cont_3 < (int) len)
 			{
 				cont_2++;
 				cont_3++;
