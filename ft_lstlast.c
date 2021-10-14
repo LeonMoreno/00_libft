@@ -6,18 +6,18 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 18:50:00 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/14 18:50:02 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/10/14 19:33:13 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if(lst)
+	if (lst)
 	{
-	while (lst->next != NULL)
-		lst = lst->next;
+		while (lst->next != NULL)
+			lst = lst->next;
 	}
 	return (lst);
 }
