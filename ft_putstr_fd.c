@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 12:09:43 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/12 19:32:53 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/10/15 11:55:04 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	while (*s != '\0')
-		write(fd, &(*s++), 1);
+	write(fd, s, ft_strlen(s));
 }
