@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 19:24:36 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/01 19:25:08 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:18:51 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:28:30 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	cont;
+	size_t	i;
 
-	cont = 0;
-	while (cont < n)
+	i = 0;
+	while (i < n)
 	{
-		if (((char *)s)[cont] == ((char) c))
-			return ((int *)&s[cont]);
-		cont++;
+		if (((unsigned char *)s)[i] == (unsigned char) c)
+			return (&((unsigned char *)s)[i]);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

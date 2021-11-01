@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 13:26:30 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/04 17:55:30 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:18:23 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:26:24 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }

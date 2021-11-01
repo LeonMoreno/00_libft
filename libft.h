@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:12:44 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/15 12:25:08 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/01 14:45:23 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	*ft_memmove(void *dst, const void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t count, size_t size);
-
 
 /* Functions STR */
 int		ft_strlen(const char *s);

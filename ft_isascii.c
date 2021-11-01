@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 18:25:10 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/01 18:26:40 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:18:16 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:18:19 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

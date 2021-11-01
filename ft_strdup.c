@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:04:06 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/05 16:05:47 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:19:28 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:36:19 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*tab;
+	char	*str;
 	int		i;
 
 	i = 0;
-	while (s1[i])
-		i++;
-	tab = malloc(sizeof(*tab) * (i + 1));
-	if (!tab)
+	str = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
+	if (!str)
 		return (NULL);
-	i = 0;
-	while (s1[i])
+	while (s1[i] != '\0')
 	{
-		tab[i] = s1[i];
+		str[i] = s1[i];
 		i++;
 	}
-	tab[i] = '\0';
-	return (tab);
+	return (str);
 }
+
+/*int main(void)
+{
+	char fr[] = "Hola mi Leo";
+
+	printf("%s\n", ft_strdup(fr));
+} */

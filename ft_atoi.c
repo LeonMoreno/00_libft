@@ -3,36 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lmoreno <lmoreno@student.42.fr>            +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 13:19:46 by lmoreno           #+#    #+#             */
-/*   Updated: 2021/10/12 13:51:26 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:17:02 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:47:09 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_space(int c)
+{
+	if (c == 32 || (c >= 9 && c <= 13))
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int		cont;
-	long	res;
-	int		sign;
+	int	sing;
+	int	res;
 
-	cont = 0;
+	sing = 1;
 	res = 0;
-	sign = 1;
-	while ((str[cont] >= 9 && str[cont] <= 13) || str[cont] == 32)
-		cont++;
-	if (str[cont] == '-' || str[cont] == '+')
+	while (ft_space(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (str[cont] == '-')
-			sign = sign * -1;
-		cont++;
+		if (*str == '-')
+			sing = -1;
+		str++;
 	}
-	while (str[cont] >= '0' && str[cont] <= '9')
+	while (ft_isdigit(*str))
 	{
-		res = (res * 10) + (str[cont] - 48);
-		cont++;
+		res = (10 * res) + (*str - '0');
+		str++;
 	}
-	return (sign * res);
+	return (res * sing);
 }
+
+/*int main(void)
+{
+	char s[] = "\t\v\f\r\n \f-06050";
+	//char str[] = "      929829 ===== Hola mi leo, TE quiero Mucho";
+
+	printf("%d\n", ft_atoi(s));
+}*/

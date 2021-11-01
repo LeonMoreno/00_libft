@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:17:45 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:17:46 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:19:23 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:35:53 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_strcpy(char *src, char *dst)
 {
-	char	*tab;
-
-	tab = malloc(count * size);
-	if (!tab)
+	if (!src || !dst)
 		return (NULL);
-	ft_bzero(tab, count * size);
-	return (tab);
+	while ((*dst++ = *src++) != '\0')
+		;
+	*dst = '\0';
+	return (dst);
 }
+
+/*int main(void)
+{
+	char s[] = "Hola mi leo, tu eres LUZ";
+	char d[100];
+
+	ft_strcpy(s, d);
+	printf("%s\n", d);
+}
+*/

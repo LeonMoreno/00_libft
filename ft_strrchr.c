@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 11:06:09 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/07 11:49:15 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:21:03 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/01 14:57:00 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	cont;
+	int	len;
 
-	cont = 0;
-	while (s[cont])
-		cont++;
-	while ((cont + 1) > 0)
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		if (s[cont] == (char) c)
-			return ((char *)&s[cont]);
-		cont--;
-	}	
+		if (s[len] == (char) c)
+			return (&((char *)s)[len]);
+		len--;
+	}
 	return (NULL);
 }
+
+/*int main(void)
+{
+	char str[] = "OLe pues mi Leo";
+
+	printf("%s\n", ft_strrchr(str, 'L'));
+}
+*/
