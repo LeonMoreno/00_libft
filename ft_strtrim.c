@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:21:06 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:44:01 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/02 15:08:15 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (res = ft_substr(s1, 0, len + 1));
 }
 
-/*int main(void)
+int main(void)
 {
-	char str[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\t\t\n  ";
+	char str[] = "Leon Bonjour LeeeeLeeoeeLeo";
 
-	printf("|%s|\n", ft_strtrim(str, " \n\t"));
-}*/
+	printf("|%s|\n", ft_strtrim(str, "eLo"));
+}

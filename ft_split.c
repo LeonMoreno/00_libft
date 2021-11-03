@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:08:24 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/02 13:11:08 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/02 15:29:44 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,18 +87,18 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-/*int main(void)
+int main(void)
 {
-	char s[] = "Hola   mi Leo   Bello";
+	char s[] = "Hola\nmi Leo   Bello Mohamed HOla pues";
 	char **spl;
 	int i;
 
 	i = 0;
-	spl = ft_split(s, ' ');
+	spl = ft_split(s, '\n');
 	while (spl[i])
 	{
 		printf("%s\n", spl[i]);
 		i++;
 	}
 	return (0);
-} */
+} 
