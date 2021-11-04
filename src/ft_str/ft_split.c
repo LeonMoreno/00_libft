@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.com>   +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 13:08:24 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/02 15:29:44 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/04 18:01:50 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,19 +86,3 @@ char	**ft_split(char const *s, char c)
 	res[i] = NULL;
 	return (res);
 }
-
-int main(void)
-{
-	char s[] = "Hola\nmi Leo   Bello Mohamed HOla pues";
-	char **spl;
-	int i;
-
-	i = 0;
-	spl = ft_split(s, '\n');
-	while (spl[i])
-	{
-		printf("%s\n", spl[i]);
-		i++;
-	}
-	return (0);
-} 

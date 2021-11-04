@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:19:28 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:36:19 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:20:56 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/04 18:02:11 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*str;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	str = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	while (s1[i] != '\0')
+	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
 	{
-		str[i] = s1[i];
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		i++;
 	}
-	return (str);
+	if (i < n && ((s2[i] != '\0' && s1[i] == '\0')
+			|| (s1[i] != '\0' && s2[i] == '\0')))
+		return ((unsigned char) s1[i] - s2[i]);
+	return (0);
 }
-
-/*int main(void)
-{
-	char fr[] = "Hola mi Leo";
-
-	printf("%s\n", ft_strdup(fr));
-} */

@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:19:05 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:32:42 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:21:03 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/04 18:04:50 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	len;
 
-	if (!src && !dst)
-		return (NULL);
-	i = 0;
-	while (i < n)
+	len = ft_strlen(s);
+	while (len >= 0)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
+		if (s[len] == (char) c)
+			return (&((char *)s)[len]);
+		len--;
 	}
-	return (dst);
+	return (NULL);
 }
-
-/*int main(void)
-{
-	char s[] = "HOla mi Leo, como estas?";
-	char d[100];
-
-	ft_memcpy(d, s, 20);
-	printf("%s\n", d);
-} */

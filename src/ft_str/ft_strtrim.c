@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:19:37 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:38:35 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:21:06 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/04 18:05:08 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
+	char	*res;
+	int		len;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, s1[len]))
+		len--;
+	return (res = ft_substr(s1, 0, len + 1));
 }
-
-/*int main(void)
-{
-	char *s = "Hola";
-
-	printf("%d\n", ft_strlen(s));
-}
-*/

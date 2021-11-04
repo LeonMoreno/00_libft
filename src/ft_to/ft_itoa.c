@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.>      +#+  +:+       +#+        */
+/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:10:09 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/10/08 12:10:11 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/04 18:02:38 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* The string is placed in the buffer passed. */
+/* The buff must be large enough to hold the output */
 
 #include "libft.h"
 

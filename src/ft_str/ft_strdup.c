@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:21:03 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:57:00 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:19:28 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/04 18:01:58 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int	len;
+	char	*str;
+	int		i;
 
-	len = ft_strlen(s);
-	while (len >= 0)
+	i = 0;
+	str = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
+	if (!str)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		if (s[len] == (char) c)
-			return (&((char *)s)[len]);
-		len--;
+		str[i] = s1[i];
+		i++;
 	}
-	return (NULL);
+	return (str);
 }
-
-/*int main(void)
-{
-	char str[] = "OLe pues mi Leo";
-
-	printf("%s\n", ft_strrchr(str, 'L'));
-}
-*/

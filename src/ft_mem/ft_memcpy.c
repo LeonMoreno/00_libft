@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 14:21:06 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/02 15:08:15 by LeoMoreno        ###   ########.fr       */
+/*   Created: 2021/11/01 14:19:05 by LeoMoreno         #+#    #+#             */
+/*   Updated: 2021/11/04 18:01:31 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*res;
-	int		len;
+	size_t	i;
 
-	if (!s1 || !set)
+	if (!src && !dst)
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len]))
-		len--;
-	return (res = ft_substr(s1, 0, len + 1));
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		i++;
+	}
+	return (dst);
 }
 
-int main(void)
-{
-	char str[] = "Leon Bonjour LeeeeLeeoeeLeo";
 
-	printf("|%s|\n", ft_strtrim(str, "eLo"));
-}

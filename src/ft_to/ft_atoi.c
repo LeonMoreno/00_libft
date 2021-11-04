@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:17:02 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/01 14:47:09 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/04 18:04:15 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sing);
 }
-
-/*int main(void)
-{
-	char s[] = "\t\v\f\r\n \f-06050";
-	//char str[] = "      929829 ===== Hola mi leo, TE quiero Mucho";
-
-	printf("%d\n", ft_atoi(s));
-}*/
