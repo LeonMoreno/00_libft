@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:12:44 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/04 17:46:15 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/11/07 14:08:45 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*ft_calloc(size_t count, size_t size);
 /* Functions STR */
 int		ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-void	*ft_strcpy(char *src, char *dst);
+char	*ft_strcpy(char *dst, char *src);
 size_t	ft_strlcat(char *dst, const char *src, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
