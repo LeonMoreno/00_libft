@@ -89,7 +89,6 @@ Then I have just put them in folders and modified the Makefile to have a better 
 * [`ft_strrchr`](/src/ft_str/ft_strrchr.c)			- locate character in string (last occurence).
 * [`ft_strnstr`](/src/ft_str/ft_strnstr.c)			- locate a substring in a string (size-bounded).
 * [`ft_strncmp`](/src/ft_str/ft_strncmp.c) *			- compare strings (size-bounded).
-* [`ft_strnrcmp`](/src/ft_str/ft_strnrcmp.c)			- reversely compare strings (size-bounded).
 * [`ft_strcpy`](/src/ft_str/ft_strcpy.c) *		- copy strings.
 * [`ft_strdup`](/src/ft_str/ft_strdup.c)				- save a copy of a string (with malloc).
 * [`ft_strlcpy`](/src/ft_str/ft_strlcpy.c)			- size-bounded string copying.
