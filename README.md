@@ -108,7 +108,6 @@ Then I have just put them in folders and modified the Makefile to have a better 
 * [`ft_strjoin`](/src/ft_str/ft_strjoin.c)			- concatenate two strings into a new string (with malloc).
 * [`ft_split`](/src/ft_str/ft_split.c)				- split string, with specified character as delimiter, into an array of strings.
 * [`ft_strmapi`](/src/ft_str/ft_strmapi.c)			- create new string from modifying string with specified function.
-* [`ft_ftoa_rnd`](/src/ft_str/ft_ftoa_rnd.c)			- convert float to ASCII string.
 
 
 ## 🛠️ Usage
@@ -143,7 +142,15 @@ To clean all files generated while doing a make, go to the path and run:
 $ make fclean
 ```
 
-**3. Using it in your code**
+**3. Verification with The norminette**
+
+To check if all files follow the standard, go to the path and run:
+
+```shell
+$ make norm
+```
+
+**4. Using it in your code**
 
 To use the library functions in your code, simply include its header:
 
@@ -152,6 +159,7 @@ To use the library functions in your code, simply include its header:
 ```
 
 `gcc [main] libft.a && ./a.out` | Compile a main with the library, and then execute the program.
+
 
 ## 📋 Third-party testers
 
