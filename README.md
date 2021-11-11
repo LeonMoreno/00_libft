@@ -120,37 +120,17 @@ The library is written in C language and needs the **`gcc` compiler** and some s
 
 **1. Compiling the library**
 
-To compile the library, go to its path and run:
+ Commande       	|  Actions 	|
+|----------------	|----------	|
+| `make`      	  | Compile les .c et créer libft.a  	|
+| `make clean`    | Supprime les .o.  	|
+| `make flcean`  	| Supprime les .o et libft.a.  	|
+| `make re`     	| Exécute fclean et make.  	|
+| `make bonus`          | For bonus functions.        |
+| `make norm`          | Verification with the norminettes. |
 
-For all mandatory functions:
 
-```shell
-$ make
-```
-
-For bonus functions:
-
-```shell
-$ make bonus
-```
-
-**2. Cleaning all binary (.o) and executable files (.a)**
-
-To clean all files generated while doing a make, go to the path and run:
-
-```shell
-$ make fclean
-```
-
-**3. Verification with The norminette**
-
-To check if all files follow the standard, go to the path and run:
-
-```shell
-$ make norm
-```
-
-**4. Using it in your code**
+**2. Using it in your code**
 
 To use the library functions in your code, simply include its header:
 
