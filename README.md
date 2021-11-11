@@ -71,7 +71,6 @@ Then I have just put them in folders and modified the Makefile to have a better 
 ### Functions from `<stdlib.h>` library
 
 * [`ft_atoi`](/src/ft_to/ft_atoi.c)		- convert ASCII string to integer.
-* [`ft_atof`](/src/ft_to/ft_atof.c) *		- convert ASCII string to integer.
 * [`ft_calloc`](/src/ft_mem/ft_calloc.c)	- memory allocation.
 
 ### Functions from `<strings.h>` library
