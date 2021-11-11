@@ -96,17 +96,34 @@ Then I have just put them in folders and modified the Makefile to have a better 
 * [`ft_strlcat`](/src/ft_str/ft_strlcat.c)			- size-bounded string concatenation.
 
 ### Non-standard functions
-
+##### FT_PUT
 * [`ft_putchar_fd`](/src/ft_put/ft_putchar_fd.c)		- output a character to given file.
 * [`ft_putstr_fd`](/src/ft_put/ft_putstr_fd.c)		- output string to given file.
 * [`ft_putendl_fd`](/src/ft_put/ft_putendl_fd.c)		- output string to given file with newline.
 * [`ft_putnbr_fd`](/src/ft_put/ft_putnbr_fd.c)		- output integer to given file.
+
+##### FT_TO
 * [`ft_itoa`](/src/ft_to/ft_itoa.c)					- convert integer to ASCII string.
+
+##### FT_STR
 * [`ft_substr`](/src/ft_str/ft_substr.c)				- extract substring from string.
 * [`ft_strtrim`](/src/ft_str/ft_strtrim.c)			- trim beginning and end of string with the specified characters.
 * [`ft_strjoin`](/src/ft_str/ft_strjoin.c)			- concatenate two strings into a new string (with malloc).
 * [`ft_split`](/src/ft_str/ft_split.c)				- split string, with specified character as delimiter, into an array of strings.
 * [`ft_strmapi`](/src/ft_str/ft_strmapi.c)			- create new string from modifying string with specified function.
+* [`ft_striteri`](/src/ft_lst/ft_striteri.c)				- apply a function to each character of a string.
+
+
+##### Linked list functions
+* [`ft_lstnew`](/src/ft_lst/ft_lstnew.c)				- create new list.
+* [`ft_lstsize`](/src/ft_lst/ft_lstsize.c)			- count elements of a list.
+* [`ft_lstlast`](/src/ft_lst/ft_lstlast.c)			- find last element of list.
+* [`ft_lstadd_back`](/src/ft_lst/ft_lstadd_back.c)	- add new element at end of list.
+* [`ft_lstadd_front`](/src/ft_lst/ft_lstadd_front.c)	- add new element at beginning of list.
+* [`ft_lstdelone`](/src/ft_lst/ft_lstdelone.c)		- delete element from list.
+* [`ft_lstclear`](/src/ft_lst/ft_lstclear.c)			- delete sequence of elements of list from a starting point.
+* [`ft_lstiter`](/src/ft_lst/ft_lstiter.c)			- apply function to content of all list's elements.
+* [`ft_lstmap`](/src/ft_lst/ft_lstmap.c)				- apply function to content of all list's elements into new list.
 
 
 ## 🛠️ Usage
