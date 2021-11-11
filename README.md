@@ -18,10 +18,6 @@
 	🚀 TLDR: This project gives you the opportunity to rewrite basic C functions to understand them
 	and learn how to use them. The library will help you for your future projects in C.
 
-
-**NOTE:** To be successful with moulinette on this project I had to put all the files in the same directory.
-Then I have just put them in folders and modified the Makefile to have a better organized repository.
-
 ## Key points:
 
 * Deep understanding of many standard C library functions.
@@ -172,4 +168,3 @@ You can use any of this third party testers to test the project
 * [Tripouille/libfTester](https://github.com/Tripouille/libftTester)
 * [ska42/libft-war-machine](https://github.com/ska42/libft-war-machine)
 * [alelievr/libft-unit-test](https://github.com/alelievr/libft-unit-test)
-	
