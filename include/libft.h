@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:12:44 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/07 14:08:45 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2021/12/12 11:05:18 by LeoMoreno        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdarg.h>
 
 typedef struct s_list {
 	void			*content;
@@ -78,5 +79,21 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* Funciones FT_PRINTF */
+int        ft_printf(const char *format, ...);
+void    ft_checkarg(char c, va_list argva, int *len);
+
+/* F. FT_PRINTF Utilidades */
+void    ft_putchar(char c, int *len);
+void    ft_putstr(char *s, int *len);
+void    ft_putnbr(int nb, int *len);
+//int     ft_strlen(char *str);
+void    ft_puthexa_mayus(unsigned int nb, int *len);
+void    ft_puthexa_minus(unsigned int nb, int *len);
+void    ft_put_ptr(unsigned long long nb, int *len);
+void    ft_put_unsigned(unsigned int nb, int *len);
+void    ft_printf_bits(int nb, int *len);
+
 
 #endif

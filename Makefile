@@ -44,11 +44,17 @@ FTLST_DIR	=	ft_lst/
 FTLST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
 				ft_lstiter ft_lstlast ft_lstmap ft_lstnew ft_lstsize
 
+FTPRINT_DIR	= 	ft_printf/
+FTPRINT		= 	ft_printf ft_printf_chars ft_printf_nums ft_printf_hexa \
+			   	ft_printf_bits
+
 SRC_FILES+=$(addprefix $(FTIS_DIR),$(FTIS))
 SRC_FILES+=$(addprefix $(FTMEM_DIR),$(FTMEM))
 SRC_FILES+=$(addprefix $(FTPUT_DIR),$(FTPUT))
 SRC_FILES+=$(addprefix $(FTTO_DIR),$(FTTO))
 SRC_FILES+=$(addprefix $(FTSTR_DIR),$(FTSTR))
+SRC_FILES+=$(addprefix $(FTPRINT_DIR),$(FTPRINT))
+
 BONUS_FILES+=$(addprefix $(FTLST_DIR),$(FTLST))
 
 SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
@@ -78,6 +84,7 @@ $(OBJF):
 			@mkdir -p $(OBJ_DIR)$(FTTO_DIR)
 			@mkdir -p $(OBJ_DIR)$(FTSTR_DIR)
 			@mkdir -p $(OBJ_DIR)$(FTLST_DIR)
+			@mkdir -p $(OBJ_DIR)$(FTPRINT_DIR)
 
 bonus:		$(BONUS_OBJ)
 			@$(AR) $(NAME) $(BONUS_OBJ)
@@ -99,4 +106,3 @@ norm:
 			@norminette $(SRC) $(INCLUDES) | grep -v Norme -B1 || true
 
 .PHONY:		all clean fclean re norm
-
