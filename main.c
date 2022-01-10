@@ -4,6 +4,7 @@ int main(void)
 {
 	char s[] = "Hola mi leo, tu eres LUZ";
 
-	ft_printf("Hola mi leo %x %s\n", 987, s);
-	printf("Hola mi leo %x %s\n", 987, s);
+	ft_strcpy(s, d);
+	printf("%s\n", d);
+	ft_printf("HOla mi Leo\n");
 }
