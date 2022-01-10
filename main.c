@@ -7,4 +7,5 @@ int main(void)
 
 	ft_strcpy(s, d);
 	printf("%s\n", d);
+	ft_printf("HOla mi Leo\n");
 }
