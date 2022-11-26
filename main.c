@@ -2,9 +2,15 @@
 
 int main(void)
 {
-	char s[] = "Hola mi leo, tu eres LUZ";
+	char s[] = "    Hola     mi     leo\n    ";
+	char **split;
+	int i = 0;
 
-	ft_strcpy(s, d);
-	printf("%s\n", d);
-	ft_printf("HOla mi Leo\n");
+	split = ft_split(s, ' ');
+	while (split[i])
+	{
+		printf("split = %s\n", split[i]);
+		i++;
+	}
+	return (0);
 }
