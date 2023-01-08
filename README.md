@@ -69,13 +69,13 @@
 
 ### Functions from `<string.h>` library
 
-* [`ft_strlen`](/src/ft_str/ft_strlen.c)				- calculate the length of a string.
-* [`ft_strchr`](/src/ft_str/ft_strchr.c)				- locate character in string (first occurrence).
+* [`ft_strlen`](/src/ft_str/ft_strlen.c)			- calculate the length of a string.
+* [`ft_strchr`](/src/ft_str/ft_strchr.c)			- locate character in string (first occurrence).
 * [`ft_strrchr`](/src/ft_str/ft_strrchr.c)			- locate character in string (last occurence).
 * [`ft_strnstr`](/src/ft_str/ft_strnstr.c)			- locate a substring in a string (size-bounded).
 * [`ft_strncmp`](/src/ft_str/ft_strncmp.c)			- compare two strings (size-bounded).
-* [`ft_strcpy`](/src/ft_str/ft_strcpy.c) *		- copy strings.
-* [`ft_strdup`](/src/ft_str/ft_strdup.c)				- save a copy of a string (with malloc).
+* [`ft_strcpy`](/src/ft_str/ft_strcpy.c)			- copy strings.
+* [`ft_strdup`](/src/ft_str/ft_strdup.c)			- save a copy of a string (with malloc).
 * [`ft_strlcpy`](/src/ft_str/ft_strlcpy.c)			- size-bounded string copying.
 * [`ft_strlcat`](/src/ft_str/ft_strlcat.c)			- size-bounded string concatenation.
 
