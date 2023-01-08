@@ -122,10 +122,10 @@ The library is written in C language and needs the **`gcc` compiler** and some s
 
  Commande       	|  Actions 	|
 |----------------	|----------	|
-| `make`      	  | Compile les .c et créer libft.a  	|
-| `make clean`    | Supprime les .o.  	|
-| `make flcean`  	| Supprime les .o et libft.a.  	|
-| `make re`     	| Exécute fclean et make.  	|
+| `make`      	  | Compile the .c and create libft.a  	|
+| `make clean`    | Delete the .o.  	|
+| `make flcean`  	| Delete the .o and libft.a.  	|
+| `make re`     	| Executed fclean and make.  	|
 | `make bonus`          | For bonus functions.        |
 | `make norm`          | Verification with the norminettes. |
 
