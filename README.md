@@ -58,22 +58,22 @@
 * [`ft_atoi`](/src/ft_to/ft_atoi.c)		- convert ASCII string to integer.
 * [`ft_calloc`](/src/ft_mem/ft_calloc.c)	- memory allocation.
 
-### Functions from `<strings.h>` library
+### Functions from `<string.h>` library
 
 * [`ft_bzero`](/src/ft_mem/ft_bzero.c)		- write zeroes to a byte string.
-* [`ft_memset`](/src/ft_mem/ft_memset.c)		- write a byte to a byte string.
+* [`ft_memset`](/src/ft_mem/ft_memset.c)		- fill memory with a constant byte.
 * [`ft_memchr`](/src/ft_mem/ft_memchr.c)		- locate byte in byte string.
-* [`ft_memcmp`](/src/ft_mem/ft_memcmp.c)		- compare byte string.
-* [`ft_memmove`](/src/ft_mem/ft_memmove.c)	- copy byte string.
+* [`ft_memcmp`](/src/ft_mem/ft_memcmp.c)		- compare memory areas.
+* [`ft_memmove`](/src/ft_mem/ft_memmove.c)	- copy memory area.
 * [`ft_memcpy`](/src/ft_mem/ft_memcpy.c)		- copy memory area.
 
 ### Functions from `<string.h>` library
 
-* [`ft_strlen`](/src/ft_str/ft_strlen.c)				- find length of string.
+* [`ft_strlen`](/src/ft_str/ft_strlen.c)				- calculate the length of a string.
 * [`ft_strchr`](/src/ft_str/ft_strchr.c)				- locate character in string (first occurrence).
 * [`ft_strrchr`](/src/ft_str/ft_strrchr.c)			- locate character in string (last occurence).
 * [`ft_strnstr`](/src/ft_str/ft_strnstr.c)			- locate a substring in a string (size-bounded).
-* [`ft_strncmp`](/src/ft_str/ft_strncmp.c) *			- compare strings (size-bounded).
+* [`ft_strncmp`](/src/ft_str/ft_strncmp.c)			- compare two strings (size-bounded).
 * [`ft_strcpy`](/src/ft_str/ft_strcpy.c) *		- copy strings.
 * [`ft_strdup`](/src/ft_str/ft_strdup.c)				- save a copy of a string (with malloc).
 * [`ft_strlcpy`](/src/ft_str/ft_strlcpy.c)			- size-bounded string copying.
