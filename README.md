@@ -15,8 +15,8 @@
 
 ## 💡 About the project
 
-	🚀 TLDR: This project gives you the opportunity to rewrite basic C functions to understand them
-	and learn how to use them. The library will help you for your future projects in C.
+	🚀 TLDR: This project gives the opportunity to rewrite basic C functions to understand them
+	and learn how to use them. The library will help us for our future projects in C.
 
 ## Key points:
 
