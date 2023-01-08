@@ -45,8 +45,8 @@
 * [`ft_isascii`](/src/ft_is//ft_isascii.c)		- test for ASCII character.
 * [`ft_isalnum`](/src/ft_is//ft_isalnum.c)		- alphanumeric character test.
 * [`ft_isalpha`](/src/ft_is//ft_isalpha.c)		- alphabetic character test.
-* [`ft_islower`](/src/ft_is//ft_isalpha.c) *		- lower-case character test.
-* [`ft_isupper`](/src/ft_is//ft_isalpha.c) *		- upper-case character test.
+* [`ft_islower`](/src/ft_is//ft_isalpha.c) +		- lower-case character test.
+* [`ft_isupper`](/src/ft_is//ft_isalpha.c) +		- upper-case character test.
 * [`ft_isdigit`](/src/ft_is//ft_isdigit.c)		- decimal-digit character test.
 * [`ft_isprint`](/src/ft_is//ft_isprint.c)		- printing character test (space character inclusive).
 * [`ft_tolower`](/src/ft_to/ft_tolower.c)		- upper case to lower case letter conversion.
@@ -74,7 +74,7 @@
 * [`ft_strrchr`](/src/ft_str/ft_strrchr.c)			- locate character in string (last occurence).
 * [`ft_strnstr`](/src/ft_str/ft_strnstr.c)			- locate a substring in a string (size-bounded).
 * [`ft_strncmp`](/src/ft_str/ft_strncmp.c)			- compare two strings (size-bounded).
-* [`ft_strcpy`](/src/ft_str/ft_strcpy.c)			- copy strings.
+* [`ft_strcpy`](/src/ft_str/ft_strcpy.c) +			- copy strings.
 * [`ft_strdup`](/src/ft_str/ft_strdup.c)			- save a copy of a string (with malloc).
 * [`ft_strlcpy`](/src/ft_str/ft_strlcpy.c)			- size-bounded string copying.
 * [`ft_strlcat`](/src/ft_str/ft_strlcat.c)			- size-bounded string concatenation.
