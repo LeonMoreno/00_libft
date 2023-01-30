@@ -6,7 +6,7 @@
 /*   By: LeoMoreno <lmoreno@student.42quebec.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 13:12:44 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/12/12 11:05:18 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2023/01/30 16:21:42 by lmoreno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ft_isprint(int c);
 
 /* Functions MEM */
 void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t len);
+void	*ft_bzero(void *s, size_t len);
 void	*ft_memcpy(void *dst, const void *s, size_t n);
 void	*ft_memmove(void *dst, const void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
