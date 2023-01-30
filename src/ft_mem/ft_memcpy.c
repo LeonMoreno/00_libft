@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: LeoMoreno <lmoreno@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: lmoreno <lmoreno@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:19:05 by LeoMoreno         #+#    #+#             */
-/*   Updated: 2021/11/04 18:01:31 by LeoMoreno        ###   ########.fr       */
+/*   Updated: 2022/10/22 14:50:02 by lmoreno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -27,4 +29,17 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+int	main(void)
+{
+	char *ptr1 = "Hola leo";
+	char *dst;
 
+	dst = malloc(sizeof(char) * 10);
+
+	//char dst[50];
+	char *res;
+
+	res = ft_memcpy(dst, ptr1, 5);
+	printf("%s", res);
+	return (0);
+}
