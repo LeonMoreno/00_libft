@@ -3,20 +3,19 @@
 </h1>
 
 <p align="center">
-	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/LeonMoreno/42-libft?color=lightblue" />
-	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/LeonMoreno/42-libft?color=critical" />
-	<img alt="Code language count" src="https://img.shields.io/github/languages/count/LeonMoreno/42-libft?color=yellow" />
-	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/LeonMoreno/42-libft?color=blue" />
-	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/LeonMoreno/42-libft?color=green" />
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/LeonMoreno/00_libft?color=lightblue" />
+	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/LeonMoreno/00_libft?color=critical" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/LeonMoreno/00_libft?color=yellow" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/LeonMoreno/00_libft?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/LeonMoreno/00_libft?color=green" />
 </p>
 
 </p>
-
 
 ## 💡 About the project
 
-	🚀 TLDR: This project gives you the opportunity to rewrite basic C functions to understand them
-	and learn how to use them. The library will help you for your future projects in C.
+	🚀 TLDR: This project gives the opportunity to rewrite basic C functions to understand them
+	and learn how to use them. The library will help us for our future projects in C.
 
 ## Key points:
 
@@ -45,8 +44,8 @@
 * [`ft_isascii`](/src/ft_is//ft_isascii.c)		- test for ASCII character.
 * [`ft_isalnum`](/src/ft_is//ft_isalnum.c)		- alphanumeric character test.
 * [`ft_isalpha`](/src/ft_is//ft_isalpha.c)		- alphabetic character test.
-* [`ft_islower`](/src/ft_is//ft_isalpha.c) *		- lower-case character test.
-* [`ft_isupper`](/src/ft_is//ft_isalpha.c) *		- upper-case character test.
+* [`ft_islower`](/src/ft_is//ft_isalpha.c) +		- lower-case character test.
+* [`ft_isupper`](/src/ft_is//ft_isalpha.c) +		- upper-case character test.
 * [`ft_isdigit`](/src/ft_is//ft_isdigit.c)		- decimal-digit character test.
 * [`ft_isprint`](/src/ft_is//ft_isprint.c)		- printing character test (space character inclusive).
 * [`ft_tolower`](/src/ft_to/ft_tolower.c)		- upper case to lower case letter conversion.
@@ -58,24 +57,24 @@
 * [`ft_atoi`](/src/ft_to/ft_atoi.c)		- convert ASCII string to integer.
 * [`ft_calloc`](/src/ft_mem/ft_calloc.c)	- memory allocation.
 
-### Functions from `<strings.h>` library
+### Functions from `<string.h>` library
 
 * [`ft_bzero`](/src/ft_mem/ft_bzero.c)		- write zeroes to a byte string.
-* [`ft_memset`](/src/ft_mem/ft_memset.c)		- write a byte to a byte string.
+* [`ft_memset`](/src/ft_mem/ft_memset.c)		- fill memory with a constant byte.
 * [`ft_memchr`](/src/ft_mem/ft_memchr.c)		- locate byte in byte string.
-* [`ft_memcmp`](/src/ft_mem/ft_memcmp.c)		- compare byte string.
-* [`ft_memmove`](/src/ft_mem/ft_memmove.c)	- copy byte string.
+* [`ft_memcmp`](/src/ft_mem/ft_memcmp.c)		- compare memory areas.
+* [`ft_memmove`](/src/ft_mem/ft_memmove.c)	- copy memory area.
 * [`ft_memcpy`](/src/ft_mem/ft_memcpy.c)		- copy memory area.
 
 ### Functions from `<string.h>` library
 
-* [`ft_strlen`](/src/ft_str/ft_strlen.c)				- find length of string.
-* [`ft_strchr`](/src/ft_str/ft_strchr.c)				- locate character in string (first occurrence).
+* [`ft_strlen`](/src/ft_str/ft_strlen.c)			- calculate the length of a string.
+* [`ft_strchr`](/src/ft_str/ft_strchr.c)			- locate character in string (first occurrence).
 * [`ft_strrchr`](/src/ft_str/ft_strrchr.c)			- locate character in string (last occurence).
 * [`ft_strnstr`](/src/ft_str/ft_strnstr.c)			- locate a substring in a string (size-bounded).
-* [`ft_strncmp`](/src/ft_str/ft_strncmp.c) *			- compare strings (size-bounded).
-* [`ft_strcpy`](/src/ft_str/ft_strcpy.c) *		- copy strings.
-* [`ft_strdup`](/src/ft_str/ft_strdup.c)				- save a copy of a string (with malloc).
+* [`ft_strncmp`](/src/ft_str/ft_strncmp.c)			- compare two strings (size-bounded).
+* [`ft_strcpy`](/src/ft_str/ft_strcpy.c) +			- copy strings.
+* [`ft_strdup`](/src/ft_str/ft_strdup.c)			- save a copy of a string (with malloc).
 * [`ft_strlcpy`](/src/ft_str/ft_strlcpy.c)			- size-bounded string copying.
 * [`ft_strlcat`](/src/ft_str/ft_strlcat.c)			- size-bounded string concatenation.
 
@@ -122,10 +121,10 @@ The library is written in C language and needs the **`gcc` compiler** and some s
 
  Commande       	|  Actions 	|
 |----------------	|----------	|
-| `make`      	  | Compile les .c et créer libft.a  	|
-| `make clean`    | Supprime les .o.  	|
-| `make flcean`  	| Supprime les .o et libft.a.  	|
-| `make re`     	| Exécute fclean et make.  	|
+| `make`      	  | Compile the .c and create libft.a  	|
+| `make clean`    | Delete the .o.  	|
+| `make flcean`  	| Delete the .o and libft.a.  	|
+| `make re`     	| Executed fclean and make.  	|
 | `make bonus`          | For bonus functions.        |
 | `make norm`          | Verification with the norminettes. |
 

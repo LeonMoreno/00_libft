@@ -2,6 +2,7 @@
 
 int main (void)
 {
+<<<<<<< HEAD
 	char	**res;
 	int		i = 0;
 
